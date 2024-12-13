@@ -22,9 +22,7 @@ class DTSignInScreen extends StatefulWidget {
 
 class DTSignInScreenState extends State<DTSignInScreen> {
   bool obscureText = true;
-  final _authService = AuthService(); // Instancia del servicio de autenticación
-  bool isLoading = false; // Bandera para mostrar el indicador de carga
-
+  
   bool autoValidate = false;
 
   var emailCont = TextEditingController();
@@ -35,41 +33,12 @@ class DTSignInScreenState extends State<DTSignInScreen> {
   @override
   void initState() {
     super.initState();
-
+    init();
   }
 
-  Future<void> handleSignIn() async {
-  final email = emailCont.text.trim(); // Obtén el email del campo de texto
-  final password = passCont.text.trim(); // Obtén la contraseña del campo de texto
-
-  // Validar campos vacíos
-  if (email.isEmpty || password.isEmpty) {
-    toast('Please fill in all fields'); // Muestra un mensaje si faltan datos
-    return;
+  init() async {
+    //
   }
-
-  setState(() => isLoading = true); // Cambiar el estado a "cargando"
-
-  try {
-    final response = await _authService.login(email, password); // Llama al servicio
-
-    // Extraer y guardar el token de acceso si la autenticación es exitosa
-    final token = response['access_token'];
-    if (token != null) {
-      await setValue('access_token', token); // Guarda el token en el almacenamiento local (usando nb_utils)
-
-      // Navegar al dashboard si la autenticación es exitosa
-      DTDashboardScreen().launch(context, isNewTask: true);
-    } else {
-      toast('Authentication failed'); // Mostrar mensaje de error si no hay token
-    }
-  } catch (e) {
-    toast('Error: $e'); // Muestra el error en un toast
-  } finally {
-    setState(() => isLoading = false); // Cambiar el estado a "no cargando"
-  }
-}
-
 
   @override
   void setState(fn) {
@@ -137,19 +106,24 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                   ),
                 ),
                 16.height,
-
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  decoration: BoxDecoration(color: appColorPrimary, 
-                    borderRadius: BorderRadius.circular(8), 
-                    boxShadow: defaultBoxShadow()),
-                  child: isLoading
-                  ? CircularProgressIndicator(color: Colors.white) // Indicador de carga
-                  : Text('Sign In', style: boldTextStyle(color: white, size: 18)),
-                  
-                ).onTap(() => handleSignIn()),
-                
+                  decoration: BoxDecoration(color: appColorPrimary, borderRadius: BorderRadius.circular(8), boxShadow: defaultBoxShadow()),
+                  child: Text('Sign In', style: boldTextStyle(color: white, size: 18)),
+                ).onTap(() {
+                  //finish(context);
+                  DTDashboardScreen().launch(context);
+
+                  /// Remove comment if you want enable validation
+                  /*if (formKey.currentState.validate()) {
+                       formKey.currentState.save();
+                       DTDashboardScreen().launch(context);
+                     } else {
+                       autoValidate = true;
+                     }
+                     setState(() {});*/
+                }),
                 10.height,
                 Container(
                   alignment: Alignment.center,

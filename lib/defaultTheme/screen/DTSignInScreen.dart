@@ -8,6 +8,7 @@ import 'package:prokit_flutter/defaultTheme/screen/DTSignUpScreen.dart';
 import 'package:prokit_flutter/main.dart';
 import 'package:prokit_flutter/main/utils/AppColors.dart';
 import 'package:prokit_flutter/main/utils/AppWidget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DTSignInScreen extends StatefulWidget {
   static String tag = '/DTSignInScreen';
@@ -44,7 +45,6 @@ class DTSignInScreenState extends State<DTSignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: appBar(context, 'Sign In'),
       drawer: DTDrawerWidget(),
       body: Center(
         child: Container(
@@ -55,7 +55,7 @@ class DTSignInScreenState extends State<DTSignInScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Sign In', style: boldTextStyle(size: 24)),
+                Text('Sign In', style: Theme.of(context).textTheme.titleLarge),
                 30.height,
                 TextFormField(
                   controller: emailCont,
@@ -108,7 +108,7 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                   decoration: BoxDecoration(color: appColorPrimary, borderRadius: BorderRadius.circular(8), boxShadow: defaultBoxShadow()),
                   child: Text('Sign In', style: boldTextStyle(color: white, size: 18)),
                 ).onTap(() {
-                  finish(context);
+                  //finish(context);
                   DTDashboardScreen().launch(context);
 
                   /// Remove comment if you want enable validation
@@ -124,43 +124,24 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  decoration: BoxDecoration(color: appColorPrimary, borderRadius: BorderRadius.circular(8), boxShadow: defaultBoxShadow()),
-                  child: Text('Sign Up', style: boldTextStyle(color: white, size: 18)),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: black,  // Puedes cambiarlo por el color que prefieras para el borde
+                    ),
+                    borderRadius: BorderRadius.circular(8), 
+                    boxShadow: defaultBoxShadow()),
+                  child: Text('Sign Up', 
+                    style: boldTextStyle(
+                      color: black,  // Color del texto (puedes cambiarlo a otro color)
+                      size: 18
+                    ),
+                  ),
+                  
                 ).onTap(() {
                   DTSignUpScreen().launch(context);
                 }),
-                10.height,
-                Text('OR', style: boldTextStyle(size: 22)).center(),
-                10.height,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      decoration: BoxDecoration(color: appColorPrimary, boxShadow: defaultBoxShadow(), shape: BoxShape.circle),
-                      child: Icon(MaterialCommunityIcons.google_glass, color: white),
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      decoration: BoxDecoration(color: appColorPrimary, boxShadow: defaultBoxShadow(), shape: BoxShape.circle),
-                      child: Icon(FontAwesome.facebook, color: white),
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      decoration: BoxDecoration(color: appColorPrimary, boxShadow: defaultBoxShadow(), shape: BoxShape.circle),
-                      child: Icon(Feather.twitter, color: white),
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      decoration: BoxDecoration(color: appColorPrimary, boxShadow: defaultBoxShadow(), shape: BoxShape.circle),
-                      child: Icon(Feather.linkedin, color: white),
-                    ),
-                  ],
-                ),
+                
+                
               ],
             ),
           ).center(),

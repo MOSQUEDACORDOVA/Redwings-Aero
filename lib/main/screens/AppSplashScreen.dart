@@ -4,7 +4,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:prokit_flutter/main.dart';
-import 'package:prokit_flutter/main/screens/ProKitLauncher.dart';
+
+//import 'package:prokit_flutter/main/screens/ProKitLauncher.dart';
+
+import 'package:prokit_flutter/defaultTheme/screen/DTSignInScreen.dart';
+
 import 'package:prokit_flutter/main/utils/AppColors.dart';
 import 'package:prokit_flutter/main/utils/AppConstant.dart';
 
@@ -74,12 +78,12 @@ class _AppSplashScreenState extends State<AppSplashScreen> with SingleTickerProv
       setState(() {});
       if (isWeb || isLinux) {
         if (widget.routeName == "/") {
-          ProKitLauncher().launch(context, isNewTask: true);
+          DTSignInScreen().launch(context, isNewTask: true);
         } else {
           Navigator.of(context).pushNamed(widget.routeName);
         }
       } else {
-        ProKitLauncher().launch(context, isNewTask: true);
+        DTSignInScreen().launch(context, isNewTask: true);
       }
     });
     afterBuildCreated(() async {

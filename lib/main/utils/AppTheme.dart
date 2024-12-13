@@ -28,9 +28,93 @@ class AppThemeData {
     iconTheme: IconThemeData(color: textPrimaryColor),
     bottomSheetTheme: BottomSheetThemeData(backgroundColor: whiteColor),
     textTheme: TextTheme(
-      labelLarge: TextStyle(color: appColorPrimary),
-      titleLarge: TextStyle(color: textPrimaryColor),
-      titleSmall: TextStyle(color: textSecondaryColor),
+      // Títulos
+      displayLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.bodoniModa().fontFamily,
+        fontSize: 32,
+        fontWeight: FontWeight.bold
+      ),
+      displayMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 28
+      ),
+      displaySmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 24
+      ),
+
+      // Encabezados
+      headlineLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.bodoniModa().fontFamily,
+        fontSize: 30,
+        fontWeight: FontWeight.bold
+      ),
+      headlineMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 26
+      ),
+      headlineSmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 22
+      ),
+
+      // Títulos de secciones
+      titleLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.bodoniModa().fontFamily,
+        fontSize: 24,
+        fontWeight: FontWeight.w600
+      ),
+      titleMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 20
+      ),
+      titleSmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 18
+      ),
+
+      // Cuerpo de texto
+      bodyLarge: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 16
+      ),
+      bodyMedium: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 14
+      ),
+      bodySmall: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 12
+      ),
+
+      // Etiquetas
+      labelLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 18
+      ),
+      labelMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 16
+      ),
+      labelSmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 14
+      ),
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity, colorScheme: ColorScheme.light(primary: appColorPrimary).copyWith(error: Colors.red),
   ).copyWith(
@@ -63,9 +147,93 @@ class AppThemeData {
     cardColor: appSecondaryBackgroundColor,
     iconTheme: IconThemeData(color: whiteColor),
     textTheme: TextTheme(
-      labelLarge: TextStyle(color: color_primary_black),
-      titleLarge: TextStyle(color: whiteColor),
-      titleSmall: TextStyle(color: Colors.white54),
+      // Títulos
+      displayLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.bodoniModa().fontFamily,
+        fontSize: 32,
+        fontWeight: FontWeight.bold
+      ),
+      displayMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 28
+      ),
+      displaySmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 24
+      ),
+
+      // Encabezados
+      headlineLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.bodoniModa().fontFamily,
+        fontSize: 30,
+        fontWeight: FontWeight.bold
+      ),
+      headlineMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 26
+      ),
+      headlineSmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 22
+      ),
+
+      // Títulos de secciones
+      titleLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.bodoniModa().fontFamily,
+        fontSize: 24,
+        fontWeight: FontWeight.w600
+      ),
+      titleMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 20
+      ),
+      titleSmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 18
+      ),
+
+      // Cuerpo de texto
+      bodyLarge: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 16
+      ),
+      bodyMedium: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 14
+      ),
+      bodySmall: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 12
+      ),
+
+      // Etiquetas
+      labelLarge: TextStyle(
+        color: appColorPrimary,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 18
+      ),
+      labelMedium: TextStyle(
+        color: textPrimaryColor,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontSize: 16
+      ),
+      labelSmall: TextStyle(
+        color: textSecondaryColor,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontSize: 14
+      ),
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity, colorScheme: ColorScheme.dark(primary: appBackgroundColorDark, onPrimary: cardBackgroundBlackDark).copyWith(secondary: whiteColor).copyWith(error: Color(0xFFCF6676)),
   ).copyWith(

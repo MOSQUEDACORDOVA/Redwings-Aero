@@ -105,64 +105,6 @@ class _FlutterWebFrameState extends State<FlutterWebFrame> {
           size: widget.maximumSize,
           clipBehavior: widget.clipBehavior,
           child: Builder(builder: widget.builder),
-          headerSection: Observer(builder: (context) {
-            return Container(
-              width: context.width(),
-              padding: EdgeInsets.all(8),
-              color: appStore.isDarkModeOn ? appSecondaryBackgroundColor : cardLightColor,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    textDirection: TextDirection.ltr,
-                    children: [
-                      Image.asset('images/app/app_icon-removebg.png', height: 60, width: 60, fit: BoxFit.cover),
-                      Directionality(
-                        textDirection: TextDirection.ltr,
-                        child: TextButton(
-                          onPressed: () {
-                            // finish(context);
-                            commonLaunchUrl(MainSiteUrl);
-                          },
-                          child: Text('Main Site', style: boldTextStyle(size: 18), textDirection: TextDirection.ltr),
-                        ),
-                      ),
-                      Spacer(),
-                      Directionality(
-                        textDirection: TextDirection.ltr,
-                        child: AppButton(
-                          child: Text('Buy Now', style: primaryTextStyle(color: Colors.white), textDirection: TextDirection.ltr),
-                          elevation: 0,
-                          color: Colors.green,
-                          height: 10,
-                          onTap: () {
-                            commonLaunchUrl(BuyNowUrl);
-                          },
-                        ),
-                      ),
-                    ],
-                  ).paddingOnly(left: 8, right: 8),
-                  Container(height: 1, decoration: boxDecorationDefault(color: context.dividerColor)),
-                ],
-              ),
-            );
-          }),
-          footerSection: Observer(builder: (context) {
-            return Container(
-              alignment: Alignment.center,
-              decoration: boxDecorationDefault(
-                borderRadius: radius(0),
-                color: appStore.isDarkModeOn ? appSecondaryBackgroundColor : cardLightColor,
-              ),
-              width: context.width(),
-              child: Column(
-                children: [
-                  Container(height: 1, decoration: boxDecorationDefault(color: context.dividerColor)),
-                  Text(copyRightText, style: secondaryTextStyle(size: 12), textDirection: TextDirection.ltr).paddingAll(12),
-                ],
-              ),
-            );
-          }),
         ),
       ),
     );

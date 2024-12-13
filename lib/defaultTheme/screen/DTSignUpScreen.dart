@@ -42,7 +42,6 @@ class DTSignUpScreenState extends State<DTSignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: appBar(context, 'Sign Up'),
       drawer: DTDrawerWidget(),
       body: Center(
         child: Container(

@@ -532,5 +532,6 @@ Map<String, WidgetBuilder> routes() {
     AllTaskDoneScreen.tag: (context) => AllTaskDoneScreen(),
     AllTaskDoneScreen2.tag: (context) => AllTaskDoneScreen2(),
     EmptyCartScreen.tag: (context) => EmptyCartScreen(),
+    //EmailVerificationScreen.tag: (context) => EmailVerificationScreen(),
   };
 }

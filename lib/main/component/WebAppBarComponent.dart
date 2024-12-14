@@ -17,7 +17,7 @@ class WebAppBarComponent extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            'ProKit Flutter Web',
+            'RWS Private Jet Charter',
             style: boldTextStyle(size: 20),
           ).expand(),
           SocialMediaWidgetComponent(),

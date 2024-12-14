@@ -67,7 +67,7 @@ class AppThemeData {
       // Títulos de secciones
       titleLarge: TextStyle(
         color: black,
-        fontFamily: GoogleFonts.bodoniModa().fontFamily,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
         fontSize: 24,
         fontWeight: FontWeight.w600
       ),
@@ -90,7 +90,7 @@ class AppThemeData {
       ),
       bodyMedium: TextStyle(
         color: textSecondaryColor,
-        fontFamily: GoogleFonts.quicksand().fontFamily,
+        fontFamily: GoogleFonts.ysabeau().fontFamily,
         fontSize: 14
       ),
       bodySmall: TextStyle(

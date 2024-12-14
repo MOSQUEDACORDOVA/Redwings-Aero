@@ -52,9 +52,14 @@ class _DTForgotPwdScreenState extends State<DTForgotPwdScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('Password Reset', style: boldTextStyle(size: 24)),
-                  Text('To reset your password, enter your email to get reset link.', style: secondaryTextStyle()),
-                  30.height,
+                  Text('Password Reset', 
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.displayLarge),
+                  12.height,
+                  Text('To reset your password, enter your email to get reset link.', 
+                  style: Theme. of(context).textTheme.displaySmall),
+                  48.height,
+
                   TextFormField(
                     controller: emailCont,
                     style: primaryTextStyle(),
@@ -77,8 +82,8 @@ class _DTForgotPwdScreenState extends State<DTForgotPwdScreen> {
                   20.height,
                   Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    decoration: BoxDecoration(color: appColorPrimary, borderRadius: BorderRadius.circular(8), boxShadow: defaultBoxShadow()),
+                    padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
+                    decoration: BoxDecoration(color: appColorPrimary, borderRadius: BorderRadius.circular(100), boxShadow: defaultBoxShadow()),
                     child: Text('Send', style: boldTextStyle(color: white, size: 18)),
                   ).onTap(() {
                     if (formKey.currentState!.validate()) {

@@ -133,11 +133,26 @@ class DTSignInScreenState extends State<DTSignInScreen> {
           child: SingleChildScrollView(
             padding: EdgeInsets.all(16),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Sign In', style: Theme.of(context).textTheme.titleLarge),
-                30.height,
+                // Imagen centrada
+                Image.asset(
+                  'images/app/logo.png', // Ruta de tu imagen
+                  width: 200,            // Ancho de la imagen
+                  fit: BoxFit.cover,     // Ajuste de la imagen
+                ),
+                32.height,
+
+                Text('Fly Beyond Expectations', 
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.displayLarge),
+                8.height,
+                Text('Your premier choice for global aviation services.', 
+                  textAlign: TextAlign.center,
+                  style: Theme. of(context).textTheme.displaySmall),
+                32.height,
+
                 TextFormField(
                   controller: emailCont,
                   style: primaryTextStyle(),

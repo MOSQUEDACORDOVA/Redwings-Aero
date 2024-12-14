@@ -30,7 +30,7 @@ class AppThemeData {
     textTheme: TextTheme(
       // Títulos
       displayLarge: TextStyle(
-        color: appColorPrimary,
+        color: black,
         fontFamily: GoogleFonts.bodoniModa().fontFamily,
         fontSize: 32,
         fontWeight: FontWeight.bold
@@ -41,7 +41,7 @@ class AppThemeData {
         fontSize: 28
       ),
       displaySmall: TextStyle(
-        color: textSecondaryColor,
+        color: textPrimaryColor,
         fontFamily: GoogleFonts.ysabeau().fontFamily,
         fontSize: 24
       ),
@@ -66,7 +66,7 @@ class AppThemeData {
 
       // Títulos de secciones
       titleLarge: TextStyle(
-        color: appColorPrimary,
+        color: black,
         fontFamily: GoogleFonts.bodoniModa().fontFamily,
         fontSize: 24,
         fontWeight: FontWeight.w600

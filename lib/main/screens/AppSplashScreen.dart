@@ -156,7 +156,7 @@ class _AppSplashScreenState extends State<AppSplashScreen> with SingleTickerProv
                       ),
                     )
                   : Center(
-                      child: _e ? Image.asset('images/app/app_icon-removebg.png', height: 200, width: 200, fit: BoxFit.cover) : SizedBox(),
+                      child: _e ? Image.asset('images/app/app_icon-removebg.png', height: 300, width: 300, fit: BoxFit.cover) : SizedBox(),
                     ),
             ),
           ],

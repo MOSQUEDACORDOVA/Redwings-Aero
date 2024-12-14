@@ -12,7 +12,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:prokit_flutter/services/auth_service.dart'; // Asegúrate de importar el archivo donde creamos AuthService
 
-
 class DTSignInScreen extends StatefulWidget {
   static String tag = '/DTSignInScreen';
 
@@ -42,9 +41,14 @@ class DTSignInScreenState extends State<DTSignInScreen> {
   final email = emailCont.text.trim(); // Obtén el email del campo de texto
   final password = passCont.text.trim(); // Obtén la contraseña del campo de texto
 
-  // Validar campos vacíos
   if (email.isEmpty || password.isEmpty) {
-    toast('Please fill in all fields'); // Muestra un mensaje si faltan datos
+    setState(() => autoValidate = true); // Habilita la validación visual
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Please fill in all fields'),
+        backgroundColor: Colors.red,
+      ),
+    );
     return;
   }
 
@@ -61,10 +65,24 @@ class DTSignInScreenState extends State<DTSignInScreen> {
       // Navegar al dashboard si la autenticación es exitosa
       DTDashboardScreen().launch(context, isNewTask: true);
     } else {
-      toast('Authentication failed'); // Mostrar mensaje de error si no hay token
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Authentication failed'),
+          backgroundColor: Colors.red,
+        ),
+      );
     }
-  } catch (e) {
-    toast('Error: $e'); // Muestra el error en un toast
+  } on Exception catch (e) {
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Authentication failed'),
+        backgroundColor: Colors.red,
+      ),
+    );
+
+    //Depuración: toast('Error: $e'); 
+
   } finally {
     setState(() => isLoading = false); // Cambiar el estado a "no cargando"
   }
@@ -74,6 +92,16 @@ class DTSignInScreenState extends State<DTSignInScreen> {
   @override
   void setState(fn) {
     if (mounted) super.setState(fn);
+  }
+
+  void showLoadingDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
   }
 
   @override
@@ -101,9 +129,20 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                     labelStyle: secondaryTextStyle(),
                     border: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0), borderSide: BorderSide(color: appColorPrimary)),
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0), borderSide: BorderSide(color: appStore.textSecondaryColor!)),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0), 
+                      borderSide: BorderSide(color: appStore.textSecondaryColor!),
+                    ),
+                    errorText: autoValidate && !RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(emailCont.text.trim())
+                      ? 'Invalid email address' // Mensaje de error si el email es inválido
+                      : null,
                   ),
                   keyboardType: TextInputType.emailAddress,
+                  onChanged: (value) {
+                    setState(() {
+                      autoValidate = !RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value.trim());
+                    });
+                  },
                   onFieldSubmitted: (s) => FocusScope.of(context).requestFocus(passFocus),
                   textInputAction: TextInputAction.next,
                 ),
@@ -119,7 +158,13 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                     labelStyle: secondaryTextStyle(),
                     border: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0), borderSide: BorderSide(color: appColorPrimary)),
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0), borderSide: BorderSide(color: appStore.textSecondaryColor!)),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0), 
+                      borderSide: BorderSide(color: appStore.textSecondaryColor!),
+                    ),
+                    errorText: autoValidate && passCont.text.trim().isEmpty
+                      ? 'Password is required'
+                      : null, // Valida campo vacío
                     suffix: Icon(!obscureText ? Icons.visibility : Icons.visibility_off).onTap(() {
                       obscureText = !obscureText;
                       setState(() {});
@@ -141,14 +186,16 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  decoration: BoxDecoration(color: appColorPrimary, 
+                  decoration: BoxDecoration(color: isLoading ? Colors.grey : appColorPrimary,
                     borderRadius: BorderRadius.circular(8), 
                     boxShadow: defaultBoxShadow()),
                   child: isLoading
                   ? CircularProgressIndicator(color: Colors.white) // Indicador de carga
                   : Text('Sign In', style: boldTextStyle(color: white, size: 18)),
                   
-                ).onTap(() => handleSignIn()),
+                ).onTap(() {
+                  if (!isLoading) handleSignIn(); // Evita clics múltiples
+                }),
                 
                 10.height,
                 Container(

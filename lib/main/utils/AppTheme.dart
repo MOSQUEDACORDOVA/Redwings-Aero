@@ -42,7 +42,7 @@ class AppThemeData {
       ),
       displaySmall: TextStyle(
         color: textPrimaryColor,
-        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
         fontSize: 24
       ),
 
@@ -101,13 +101,13 @@ class AppThemeData {
 
       // Etiquetas
       labelLarge: TextStyle(
-        color: appColorPrimary,
+        color: black,
         fontFamily: GoogleFonts.quicksand().fontFamily,
         fontSize: 18
       ),
       labelMedium: TextStyle(
         color: textPrimaryColor,
-        fontFamily: GoogleFonts.ysabeau().fontFamily,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
         fontSize: 16
       ),
       labelSmall: TextStyle(

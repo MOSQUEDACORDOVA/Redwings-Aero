@@ -147,11 +147,11 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                 Text('Fly Beyond Expectations', 
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.displayLarge),
-                8.height,
+                12.height,
                 Text('Your premier choice for global aviation services.', 
                   textAlign: TextAlign.center,
                   style: Theme. of(context).textTheme.displaySmall),
-                32.height,
+                48.height,
 
                 TextFormField(
                   controller: emailCont,
@@ -230,21 +230,30 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                   if (!isLoading) handleSignIn(); // Evita clics múltiples
                 }),
                 
-                10.height,
+                28.height,
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: black,  // Puedes cambiarlo por el color que prefieras para el borde
-                    ),
-                    borderRadius: BorderRadius.circular(8), 
-                    boxShadow: defaultBoxShadow()),
-                  child: Text('Sign Up', 
-                    style: boldTextStyle(
-                      color: black,  // Color del texto (puedes cambiarlo a otro color)
-                      size: 18
-                    ),
+                  
+                  child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Don't have an account? ", // Texto inicial sin subrayado
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                          fontSize: 18, // Ajusta el tamaño según tu tema
+                          color: black, // Color del texto
+                        ),
+                      ),
+                      TextSpan(
+                        text: "Sign up", // Texto con subrayado
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18, // Mantén el tamaño igual para consistencia
+                        ),
+                      ),
+                    ],
+                  ),
                   ),
                   
                 ).onTap(() {

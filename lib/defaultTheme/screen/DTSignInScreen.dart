@@ -38,15 +38,22 @@ class DTSignInScreenState extends State<DTSignInScreen> {
   }
 
   void checkSession() async {
-    
-      if (getStringAsync("access_token") != null && getStringAsync("access_token").isNotEmpty) {
+      String? token = await getStringAsync("access_token");
+      
+      // Agregar log para depuración
+      print("Token en checkSession: $token");
+
+      if (token.isNotEmpty) {
         // Si el token existe, redirige al Dashboard
+        print("Token encontrado, redirigiendo al Dashboard...");
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => DTDashboardScreen()),
         );
+      } else {
+        print("Token no encontrado o está vacío.");
       }
-    }
+  }
 
   Future<void> handleSignIn() async {
   final email = emailCont.text.trim(); // Obtén el email del campo de texto

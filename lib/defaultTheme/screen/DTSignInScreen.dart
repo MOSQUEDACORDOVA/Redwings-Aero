@@ -161,7 +161,7 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                     contentPadding: EdgeInsets.all(16),
                     labelStyle: secondaryTextStyle(),
                     border: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0), borderSide: BorderSide(color: appColorPrimary)),
+                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0), 
                       borderSide: BorderSide(color: appStore.textSecondaryColor!),
@@ -180,6 +180,7 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                   textInputAction: TextInputAction.next,
                 ),
                 16.height,
+                
                 TextFormField(
                   obscureText: obscureText,
                   focusNode: passFocus,
@@ -190,7 +191,7 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                     contentPadding: EdgeInsets.all(16),
                     labelStyle: secondaryTextStyle(),
                     border: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0), borderSide: BorderSide(color: appColorPrimary)),
+                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0), 
                       borderSide: BorderSide(color: appStore.textSecondaryColor!),
@@ -204,6 +205,7 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                     }),
                   ),
                 ),
+
                 GestureDetector(
                   onTap: () {
                     DTForgotPwdScreen().launch(context);
@@ -218,9 +220,9 @@ class DTSignInScreenState extends State<DTSignInScreen> {
 
                 Container(
                   alignment: Alignment.center,
-                  padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
                   decoration: BoxDecoration(color: isLoading ? Colors.grey : appColorPrimary,
-                    borderRadius: BorderRadius.circular(8), 
+                    borderRadius: BorderRadius.circular(100), 
                     boxShadow: defaultBoxShadow()),
                   child: isLoading
                   ? CircularProgressIndicator(color: Colors.white) // Indicador de carga
@@ -229,8 +231,8 @@ class DTSignInScreenState extends State<DTSignInScreen> {
                 ).onTap(() {
                   if (!isLoading) handleSignIn(); // Evita clics múltiples
                 }),
-                
                 28.height,
+
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),

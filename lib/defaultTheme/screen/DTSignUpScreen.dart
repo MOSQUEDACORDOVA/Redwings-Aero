@@ -6,6 +6,7 @@ import 'package:prokit_flutter/main/utils/AppWidget.dart';
 import 'dart:convert'; // Para jsonDecode
 import 'package:http/http.dart' as http;
 import 'package:prokit_flutter/singleScreens/EmailVerificationScreen.dart';
+import 'package:prokit_flutter/defaultTheme/screen/DTSignInScreen.dart';
 
 import '../../main.dart';
 import 'DTDrawerWidget.dart';
@@ -147,11 +148,26 @@ class DTSignUpScreenState extends State<DTSignUpScreen> {
             child: Form(
               key: _formKey, // Usar la clave del formulario
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('Sign Up', style: boldTextStyle(size: 24)),
-                  30.height,
+                  // Imagen centrada
+                  Image.asset(
+                    'images/app/logo.png', // Ruta de tu imagen
+                    width: 200,            // Ancho de la imagen
+                    fit: BoxFit.cover,     // Ajuste de la imagen
+                  ),
+                  32.height,
+
+                  Text('Join Us Today', 
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.displayLarge),
+                  12.height,
+                  Text('Create your account to access premium aviation services.', 
+                    textAlign: TextAlign.center,
+                    style: Theme. of(context).textTheme.displaySmall),
+                  48.height,
+                  
                   TextFormField(
                     controller: nameCont,
                     style: primaryTextStyle(),
@@ -238,8 +254,10 @@ class DTSignUpScreenState extends State<DTSignUpScreen> {
                   20.height,
                   Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    decoration: BoxDecoration(color: appColorPrimary, borderRadius: BorderRadius.circular(8), boxShadow: defaultBoxShadow()),
+                    padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
+                    decoration: BoxDecoration(color: appColorPrimary, 
+                      borderRadius: BorderRadius.circular(100), 
+                      boxShadow: defaultBoxShadow()),
                     child: isLoading
                       ? CircularProgressIndicator(color: Colors.white) // Indicador de carga
                       : Text('Sign Up', style: boldTextStyle(color: white, size: 18)),
@@ -248,10 +266,37 @@ class DTSignUpScreenState extends State<DTSignUpScreen> {
                     if (!isLoading) handleSignUp(); // Evitar múltiples registros
 
                   }),
-                  20.height,
-                  Text('Already Registered?', style: boldTextStyle(color: appColorPrimary)).center().onTap(() {
-                    finish(context);
+                  28.height,
+
+                  Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    
+                    child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Already Registered? ", // Texto inicial sin subrayado
+                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            fontSize: 18, // Ajusta el tamaño según tu tema
+                            color: black, // Color del texto
+                          ),
+                        ),
+                        TextSpan(
+                          text: "Sign In", // Texto con subrayado
+                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18, // Mantén el tamaño igual para consistencia
+                          ),
+                        ),
+                      ],
+                    ),
+                    ),
+                    
+                  ).onTap(() {
+                    DTSignInScreen().launch(context);
                   }),
+                  
                 ],
               ),
             ),

@@ -17,7 +17,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version: 3.24.3 
+          flutter-version: 3.24.3
       - run: flutter --version
       
       - name: Install dependencies
@@ -28,5 +28,5 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_REDWINGS_AERO }}
+          channelId: live
           projectId: redwings-aero
-

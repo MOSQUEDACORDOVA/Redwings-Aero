@@ -1,4 +1,4 @@
-const mainAppName = 'ProKit Flutter';
+const mainAppName = 'RWS Private Jet Charter';
 
 //region Social URLs
 const youTubeUrl = 'https://www.youtube.com/iqonicdesign';
@@ -91,7 +91,7 @@ const ProKitSoLongText =
     'ProKit – Biggest Flutter UI kit is the ultimate library of Flutter UI templates combined into a high-quality Flutter UI kit for Android/iOS developers. The collection consists of UI elements and styles based on Material Design Guidelines';
 
 // App Names
-const mpAppName = 'Music PodCast';
+const mpAppName = 'RWS Private Jet Charter';
 //AppId
 const OneSignalId = '610492cb-f697-43cf-af0a-4c6461508157';
 

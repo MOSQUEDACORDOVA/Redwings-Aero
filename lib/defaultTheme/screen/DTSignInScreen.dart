@@ -34,8 +34,19 @@ class DTSignInScreenState extends State<DTSignInScreen> {
   @override
   void initState() {
     super.initState();
-
+    checkSession();
   }
+
+  void checkSession() async {
+    
+      if (getStringAsync("access_token") != null && getStringAsync("access_token").isNotEmpty) {
+        // Si el token existe, redirige al Dashboard
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => DTDashboardScreen()),
+        );
+      }
+    }
 
   Future<void> handleSignIn() async {
   final email = emailCont.text.trim(); // Obtén el email del campo de texto

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:prokit_flutter/fullApps/dating/utils/DAColors.dart';
 import 'package:prokit_flutter/main.dart';
 import 'package:prokit_flutter/main/utils/AppWidget.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -59,7 +58,6 @@ class GenerateQRCodeScreenState extends State<GenerateQRCodeScreen> {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide: BorderSide(color: primaryColor, width: 1.0),
                 ),
               ),
               onChanged: (v) {

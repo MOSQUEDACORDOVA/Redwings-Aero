@@ -6,8 +6,6 @@ import 'package:prokit_flutter/dashboard/utils/DbColors.dart';
 import 'package:prokit_flutter/dashboard/utils/DbDataGenerator.dart';
 import 'package:prokit_flutter/dashboard/utils/DbImages.dart';
 import 'package:prokit_flutter/dashboard/utils/DbStrings.dart';
-import 'package:prokit_flutter/fullApps/carea/commons/scrolling_support_web.dart';
-import 'package:prokit_flutter/fullApps/dating/utils/DAWidgets.dart';
 import 'package:prokit_flutter/main/utils/AppConstant.dart';
 import 'package:prokit_flutter/main/utils/AppWidget.dart';
 import 'package:prokit_flutter/main/utils/flutter_rating_bar.dart';
@@ -77,80 +75,7 @@ class Dashboard1State extends State<Dashboard1> {
                 ],
               ),
             ),
-            ScrollConfiguration(
-              behavior: AppScrollBehavior(),
-              child: SingleChildScrollView(
-                padding: EdgeInsets.only(top: 100),
-                child: Container(
-                  padding: EdgeInsets.only(top: 20),
-                  alignment: Alignment.topLeft,
-                  decoration: BoxDecoration(color: white, borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24))),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(left: 20, bottom: 16),
-                        child: Text(db1_top_picks_for_you, style: primaryTextStyle(size: 20, fontFamily: fontMedium)),
-                      ),
-                      ScrollConfiguration(
-                        behavior: AppScrollBehavior(),
-                        child: HorizontalList(
-                          crossAxisAlignment: WrapCrossAlignment.start,
-                          wrapAlignment: WrapAlignment.start,
-                          itemCount: mListings.length,
-                          itemBuilder: (_, i) {
-                            return Category(mListings[i], i);
-                          },
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 20, bottom: 4),
-                        child: Text(db1_lbl_recommended_dishes, style: primaryTextStyle(size: 20, fontFamily: fontMedium)),
-                      ),
-                      16.height,
-                      ScrollConfiguration(
-                        behavior: AppScrollBehavior(),
-                        child: HorizontalList(
-                          crossAxisAlignment: WrapCrossAlignment.start,
-                          wrapAlignment: WrapAlignment.start,
-                          itemCount: mListings3.length,
-                          itemBuilder: (_, i) {
-                            return Recommended(mListings3[i], i);
-                          },
-                        ),
-                      ),
-                      16.height,
-                      Padding(
-                        padding: EdgeInsets.only(left: 20, bottom: 16),
-                        child: Text(db1_lbl_filter_your_favourite, style: primaryTextStyle(size: 20, fontFamily: fontMedium)),
-                      ),
-                      ScrollConfiguration(
-                        behavior: AppScrollBehavior(),
-                        child: HorizontalList(
-                          crossAxisAlignment: WrapCrossAlignment.start,
-                          wrapAlignment: WrapAlignment.start,
-                          itemCount: mListings1.length,
-                          itemBuilder: (_, i) {
-                            return Filter(mListings1[i], i);
-                          },
-                        ),
-                      ),
-                      Text(db1_lbl_popular, style: primaryTextStyle(size: 20, fontFamily: fontMedium)).paddingAll(16),
-                      ListView.builder(
-                        scrollDirection: Axis.vertical,
-                        itemCount: mListings2.length,
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        itemBuilder: (context, index) {
-                          return Popular(mListings2[index], index);
-                        },
-                      ),
-                      16.height,
-                    ],
-                  ),
-                ),
-              ),
-            )
+            
           ],
         ),
       ),
@@ -174,7 +99,6 @@ class Popular extends StatelessWidget {
         children: <Widget>[
           ClipRRect(
             borderRadius: BorderRadius.circular(12.0),
-            child: commonCachedNetworkImage(model.img, fit: BoxFit.fill, height: 80, width: 80),
           ),
           SizedBox(width: 10),
           Column(
@@ -257,7 +181,6 @@ class Recommended extends StatelessWidget {
                 alignment: FractionalOffset.centerLeft,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
-                  child: commonCachedNetworkImage(model.img, height: width * 0.38, width: MediaQuery.of(context).size.width, fit: BoxFit.cover),
                 )),
             Container(
               transform: Matrix4.translationValues(0.0, -30.0, 0.0),

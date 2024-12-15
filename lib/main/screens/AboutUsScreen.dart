@@ -4,7 +4,6 @@ import 'package:prokit_flutter/main/utils/AppColors.dart';
 import 'package:prokit_flutter/main/utils/AppConstant.dart';
 import 'package:prokit_flutter/main/utils/AppWidget.dart';
 
-import '../../fullApps/stockMarket/utils/common.dart';
 import '../../main.dart';
 import '../../workingApps/chatGPT/utils/constant.dart';
 
@@ -41,16 +40,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
             Text(language!.lblProkitUIDesignKit, style: secondaryTextStyle()),
             16.height,
             Text(language!.lblAboutUsDescription, style: secondaryTextStyle()),
-            30.height,
-            AppButton(
-              child: Text('Buy Now', style: primaryTextStyle(color: Colors.white), textDirection: TextDirection.ltr),
-              elevation: 0,
-              color: Colors.green,
-              height: 10,
-              onTap: () {
-                commonLaunchUrl(BuyNowUrl);
-              },
-            ).visible(!getBoolAsync(IN_APP_STORE_REVIEW))
+            
           ],
         ).paddingAll(16),
       ),

@@ -9,56 +9,13 @@ import 'package:prokit_flutter/customPaint/customTemperatureWidget/TemperatureWi
 import 'package:prokit_flutter/customPaint/shape/ShapeScreen.dart';
 import 'package:prokit_flutter/dashboard/analytics/screens/analytics_dashboard.dart';
 import 'package:prokit_flutter/dashboard/banking/screens/banking_dashboard.dart';
-import 'package:prokit_flutter/dashboard/health_medical/screens/health_medical_dashboard.dart';
 import 'package:prokit_flutter/dashboard/screen/Dashboard1.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard2.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard3.dart';
 import 'package:prokit_flutter/dashboard/screen/Dashboard4.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard5.dart';
 import 'package:prokit_flutter/dashboard/screen/Dashboard6.dart';
 import 'package:prokit_flutter/dashboard/screen/Dashboard7.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard8.dart';
 import 'package:prokit_flutter/dashboard/smart_home/screens/smart_home_dashboard.dart';
 import 'package:prokit_flutter/dashboard/split_bill/screens/split_bill_dashboard.dart';
 import 'package:prokit_flutter/dashboard/utility_tracker/screens/utility_tracker_dashboard.dart';
-import 'package:prokit_flutter/fullApps/appetit/screens/ASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/banking/screen/BankingSplash.dart';
-import 'package:prokit_flutter/fullApps/beautyMaster/screens/BMSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/carea/screens/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/cloudStorage/screens/CSSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/coinPro/screen/CPSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/dating/screen/DASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/evSpot/screens/ev_splash_screen.dart';
-import 'package:prokit_flutter/fullApps/eventApp/screens/EASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/flixv2/screen/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/food/screen/FoodWalkThrough.dart';
-import 'package:prokit_flutter/fullApps/grocery/screen/GrocerySplash.dart';
-import 'package:prokit_flutter/fullApps/hairSalon/screens/BHSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/homeService/screens/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/jobSearch/screens/JSSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/juberCarBooking/screens/JCBSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/laundryService/screens/LSWalkThroughScreen.dart';
-import 'package:prokit_flutter/fullApps/learner/Screens/LearnerWalkThrough.dart';
-import 'package:prokit_flutter/fullApps/mealime/screens/MIASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/mediLab/screens/MLSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/medium/screens/MSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/musicPodcast/screen/MPSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/newsBlog/screen/NBSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/nftMarketPlace/screens/NMPSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/orapay/screens/op_splash_screen.dart';
-import 'package:prokit_flutter/fullApps/proScan/screens/pro_scan_splash_sceen.dart';
-import 'package:prokit_flutter/fullApps/qibus/screen/QIBusSplash.dart';
-import 'package:prokit_flutter/fullApps/quiz/Screens/QuizSignIn.dart';
-import 'package:prokit_flutter/fullApps/recipe/screens/RCSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/shopHop/screens/ShSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/smartDeck/Screens/SDSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/smartHome/screens/SHSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/sneakerShopping/screen/SSSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/social/screen/SocialWalkThrough.dart';
-import 'package:prokit_flutter/fullApps/socialv/screens/SVSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/stockMarket/screens/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/walletApp/screen/WASplashScreen.dart';
 import 'package:prokit_flutter/integrations/screens/BarChart1Screen.dart';
 import 'package:prokit_flutter/integrations/screens/BarChart2Screen.dart';
 import 'package:prokit_flutter/integrations/screens/FingerprintAuthentication.dart';
@@ -89,11 +46,9 @@ import 'package:prokit_flutter/integrations/screens/TransactionScreen.dart';
 import 'package:prokit_flutter/integrations/screens/VideoPickerScreen.dart';
 import 'package:prokit_flutter/integrations/screens/api/get_method_api_integration.dart';
 import 'package:prokit_flutter/integrations/screens/api/post_method_api_integration.dart';
-import 'package:prokit_flutter/integrations/screens/apple_signin_screen.dart';
 import 'package:prokit_flutter/integrations/screens/before_after_image_screen.dart';
 import 'package:prokit_flutter/integrations/screens/button_screen.dart';
 import 'package:prokit_flutter/integrations/screens/confetti/CHomePage.dart';
-import 'package:prokit_flutter/integrations/screens/firebaseCrud/FUserListScreen.dart';
 import 'package:prokit_flutter/integrations/screens/fluid_slider_screen.dart';
 import 'package:prokit_flutter/integrations/screens/flutterCalender/CalenderHomePage.dart';
 import 'package:prokit_flutter/integrations/screens/flutterTinderCard/TinderHomePage.dart';
@@ -101,8 +56,8 @@ import 'package:prokit_flutter/integrations/screens/folding_cell_screen.dart';
 import 'package:prokit_flutter/integrations/screens/google_signin_screen.dart';
 import 'package:prokit_flutter/integrations/screens/liquid_pull_to_refresh_screen.dart';
 import 'package:prokit_flutter/integrations/screens/liquid_swipe_screen.dart';
-import 'package:prokit_flutter/integrations/screens/pdfReader/LocalPdfViewerScreen.dart';
-import 'package:prokit_flutter/integrations/screens/pdfReader/OnlinePdfViewerScreen.dart';
+//import 'package:prokit_flutter/integrations/screens/pdfReader/LocalPdfViewerScreen.dart';
+//import 'package:prokit_flutter/integrations/screens/pdfReader/OnlinePdfViewerScreen.dart';
 import 'package:prokit_flutter/integrations/screens/picker_screen.dart';
 import 'package:prokit_flutter/integrations/screens/shader_mask_screen.dart';
 import 'package:prokit_flutter/integrations/screens/singature_screen.dart';
@@ -114,27 +69,19 @@ import 'package:prokit_flutter/singleScreens/emptyScreens/AllTaskDoneScreen.dart
 import 'package:prokit_flutter/singleScreens/emptyScreens/AllTaskDoneScreen2.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/EmptyCartScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/EmptyCartScreen2.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/EmptyCartScreen3.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/EmptyCartScreen4.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/EmptyCartScreen5.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/InboxScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/InboxScreen2.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen2.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen3.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen4.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen5.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoChatsScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoChatsScreen2.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoChatsScreen3.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoChatsScreen4.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoChatsScreen5.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoEventScreen.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoEventScreen2.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoEventScreen3.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoEventScreen4.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoMailScreen.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoNotificationScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoNotificationScreen2.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoNotificationScreen3.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoNotificationScreen4.dart';
@@ -142,13 +89,6 @@ import 'package:prokit_flutter/singleScreens/emptyScreens/NoNotificationScreen5.
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoPhotosScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoPhotosScreen2.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoPhotosScreen3.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoPhotosScreen4.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoPhotosScreen5.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoSentMailScreen.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoVideosScreen.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoVideosScreen2.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoVideosScreen3.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoVideosScreen4.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoVideosScreen5.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/TaskDoneScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/TaskDoneScreen2.dart';
@@ -204,7 +144,6 @@ import 'package:prokit_flutter/themes/theme11/screens/T11BottomNavigationScreen.
 import 'package:prokit_flutter/themes/theme11/screens/T11Card1Screen.dart';
 import 'package:prokit_flutter/themes/theme11/screens/T11Card2Screen.dart';
 import 'package:prokit_flutter/themes/theme11/screens/T11DashboardScreen.dart';
-import 'package:prokit_flutter/themes/theme11/screens/T11DescriptionScreen.dart';
 import 'package:prokit_flutter/themes/theme11/screens/T11ListingScreen.dart';
 import 'package:prokit_flutter/themes/theme11/screens/T11ProfileScreen.dart';
 import 'package:prokit_flutter/themes/theme11/screens/T11SearchScreen.dart';
@@ -235,45 +174,6 @@ import 'package:prokit_flutter/themes/theme13/screens/T13SettingScreen.dart';
 import 'package:prokit_flutter/themes/theme13/screens/T13SignInScreen.dart';
 import 'package:prokit_flutter/themes/theme13/screens/T13SignUpScreen.dart';
 import 'package:prokit_flutter/themes/theme13/screens/T13WalkThroughScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14AllMessagesListScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14AutorisationScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14CalendarScreen1.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14CalendarScreen2.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14CommunicationScreen3.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14CommunicationScreen4.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14FinanceScreen1.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14FinanceScreen2.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14FinanceScreen3.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14FinanceScreen4.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14FinanceScreen5.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14ProfileScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14RateScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SignInScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SignInScreen2.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SignInScreen3.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SignInScreen4.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SignUpScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SignUpScreen2.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SubscriptionScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SubscriptionScreen2.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SubscriptionScreen4.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SubscriptionScreen5.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SubscriptionScreen7.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14SuccessAndFailScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14TravelDetailScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14TravelScreen.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14TravelScreen2.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14TravelScreen3.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14TravelScreen4.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen1.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen2.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen3.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen4.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen5.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen6.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen7.dart';
-import 'package:prokit_flutter/themes/theme14/screens/T14WalkThroughScreen8.dart';
-import 'package:prokit_flutter/themes/theme15/screens/T15favorite_pets_screen.dart';
 import 'package:prokit_flutter/themes/theme15/screens/T15message_screen.dart';
 import 'package:prokit_flutter/themes/theme2/screens/T2BottomNavigation.dart';
 import 'package:prokit_flutter/themes/theme2/screens/T2BottomSheet.dart';
@@ -371,9 +271,6 @@ import 'package:prokit_flutter/webApps/dashboards/dashboard2/screens/HomeScreen.
 import 'package:prokit_flutter/webApps/dashboards/dashboard2/screens/HomeScreenMobile.dart';
 import 'package:prokit_flutter/webApps/dashboards/dashboard2/screens/HomeScreenTablet.dart';
 import 'package:prokit_flutter/webApps/dashboards/dashboard3/HomeScreen.dart';
-import 'package:prokit_flutter/webApps/portfolios/portfolio1/Portfolio1Screen.dart';
-import 'package:prokit_flutter/webApps/portfolios/portfolio2/Portfolio2Screen.dart';
-import 'package:prokit_flutter/webApps/portfolios/portfolio3/Portfolio3Screen.dart';
 import 'package:prokit_flutter/widgets/animationAndMotionWidgets/AMAnimatedBuilderScreen.dart';
 import 'package:prokit_flutter/widgets/animationAndMotionWidgets/AMAnimatedContainerScreen.dart';
 import 'package:prokit_flutter/widgets/animationAndMotionWidgets/AMAnimatedCrossFadeScreen.dart';
@@ -489,13 +386,8 @@ import 'package:prokit_flutter/widgets/paintingAndEffectWidgets/PETransformScree
 import 'package:prokit_flutter/workingApps/chatGPT/screens/chatting_screen.dart';
 import 'package:prokit_flutter/workingApps/chatGPTMailGeneration/screens/chatgpt_splash_screen.dart';
 
-import '../../fullApps/adoptify/screens/adoptify_splash_screen.dart';
-import '../../fullApps/caffely/screens/caffely_splash_screen.dart';
-import '../../fullApps/moviea/screens/moviea_splash_screen.dart';
-import '../../fullApps/potea/screen/splash/potea_splash_screen.dart';
-import '../../fullApps/relixMusicApp/screens/relix_splash_screen.dart';
-import '../../fullApps/scribblr/screens/scribblr_splash_screen.dart';
-import '../../integrations/screens/audioPicker/audio_picker.dart';
+
+//import '../../integrations/screens/audioPicker/audio_picker.dart';
 import '../../themes/theme15/screens/T15bottom_navigation_bar_screen.dart';
 import '../../themes/theme15/screens/T15bottomsheet_screen.dart';
 import '../../themes/theme15/screens/T15card_screen.dart';
@@ -621,7 +513,6 @@ List<ProTheme> getPetAdoptionKit() {
   list.add(ProTheme(name: 'Payment Screen', is_theme: true, type: '', widget: PaymentScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Message Screen', is_theme: true, type: '', widget: MessageScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Forgot Password Screen', is_theme: true, type: '', widget: ForgotPasswordScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Favorite Pets Screen', is_theme: true, type: '', widget: FavoritePetsScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Filter Screen', is_theme: true, type: '', widget: FilterScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Drawer Screen', is_theme: true, type: '', widget: DrawerScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Donate Screen', is_theme: true, type: '', widget: DonateScreen(), darkThemeSupported: true));
@@ -636,45 +527,6 @@ List<ProTheme> getPetAdoptionKit() {
 List<ProTheme> getDiamondKit() {
   List<ProTheme> list = [];
 
-  list.add(ProTheme(name: 'WalkThrough 1', is_theme: true, type: '', widget: T14WalkThroughScreen1(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'WalkThrough 2', is_theme: true, type: '', widget: T14WalkThroughScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'WalkThrough 3', is_theme: true, type: '', widget: T14WalkThroughScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'WalkThrough 4', is_theme: true, type: '', widget: T14WalkThroughScreen4(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'WalkThrough 5', is_theme: true, type: '', widget: T14WalkThroughScreen5(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'WalkThrough 6', is_theme: true, type: '', widget: T14WalkThroughScreen6(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'WalkThrough 7', is_theme: true, type: '', widget: T14WalkThroughScreen7(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'WalkThrough 8', is_theme: true, type: '', widget: T14WalkThroughScreen8(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Calender 1', is_theme: true, type: '', widget: T14CalendarScreen1(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Calender 2', is_theme: true, type: '', widget: T14CalendarScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Sign In 1', is_theme: true, type: '', widget: T14SignInScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Sign In 2', is_theme: true, type: '', widget: T14SignInScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Sign In 3', is_theme: true, type: '', widget: T14SignInScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Sign In 4', is_theme: true, type: '', widget: T14SignInScreen4(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Sign Up 1', is_theme: true, type: '', widget: T14SignUpScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Sign Up 2', is_theme: true, type: '', widget: T14SignUpScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Authorization', is_theme: true, type: '', widget: T14AutorisationScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Profile', is_theme: true, type: '', widget: T14ProfileScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Finance 1', is_theme: true, type: '', widget: T14FinanceScreen1(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Finance 2', is_theme: true, type: '', widget: T14FinanceScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Finance 3', is_theme: true, type: '', widget: T14FinanceScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Finance 4', is_theme: true, type: '', widget: T14FinanceScreen4(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Finance 5', is_theme: true, type: '', widget: T14FinanceScreen5(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Travel', is_theme: true, type: '', widget: T14TravelScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Travel Description', is_theme: true, type: '', widget: T14TravelDetailScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Travel 2', is_theme: true, type: '', widget: T14TravelScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Travel 3', is_theme: true, type: '', widget: T14TravelScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Travel 4', is_theme: true, type: '', widget: T14TravelScreen4(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'SubScription 1', is_theme: true, type: '', widget: T14SubscriptionScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'SubScription 2', is_theme: true, type: '', widget: T14SubscriptionScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'SubScription 3', is_theme: true, type: '', widget: T14SubscriptionScreen4(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'SubScription 4', is_theme: true, type: '', widget: T14SubscriptionScreen5(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'SubScription 5', is_theme: true, type: '', widget: T14SubscriptionScreen7(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Success and Fail ', is_theme: true, type: '', widget: T14SuccessAndFailScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Rate the app', is_theme: true, type: '', widget: T14RateScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'AllMessagesList', is_theme: true, type: '', widget: T14AllMessagesListScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Communication 3', is_theme: true, type: '', widget: T14CommunicationScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Communication 4', is_theme: true, type: '', widget: T14CommunicationScreen4(), darkThemeSupported: true));
-
   return list;
 }
 
@@ -688,7 +540,6 @@ List<ProTheme> getMusicStreaming() {
   list.add(ProTheme(name: 'Dashboard', is_theme: true, type: '', widget: T11DashboardScreen()));
   list.add(ProTheme(name: 'Search', is_theme: true, type: '', widget: T11SearchScreen()));
   list.add(ProTheme(name: 'Listing', is_theme: true, type: '', widget: T11ListingScreen()));
-  list.add(ProTheme(name: 'Description', is_theme: true, type: '', widget: T11DescriptionScreen()));
   list.add(ProTheme(name: 'Setting', is_theme: true, type: '', widget: T11SettingScreen()));
   list.add(ProTheme(name: 'Card 1', is_theme: true, type: '', widget: T11Card1Screen()));
   list.add(ProTheme(name: 'Card 2', is_theme: true, type: '', widget: T11Card2Screen()));
@@ -948,41 +799,19 @@ List<ProTheme> getEmptyScreens() {
   list.add(ProTheme(name: 'All Task 2', is_theme: true, tag: 'New', widget: AllTaskDoneScreen2(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Empty Cart 1', is_theme: true, tag: 'New', widget: EmptyCartScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Empty Cart 2', is_theme: true, tag: 'New', widget: EmptyCartScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Empty Cart 3', is_theme: true, tag: 'New', widget: EmptyCartScreen3(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Empty Cart 4', is_theme: true, tag: 'New', widget: EmptyCartScreen4(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Empty Cart 5', is_theme: true, tag: 'New', widget: EmptyCartScreen5(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Inbox 1', is_theme: true, tag: 'New', widget: InboxScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Inbox 2', is_theme: true, tag: 'New', widget: InboxScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Balance 1', is_theme: true, tag: 'New', widget: NoBalanceScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Balance 2', is_theme: true, tag: 'New', widget: NoBalanceScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Balance 3', is_theme: true, tag: 'New', widget: NoBalanceScreen3(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Balance 4', is_theme: true, tag: 'New', widget: NoBalanceScreen4(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Balance 5', is_theme: true, tag: 'New', widget: NoBalanceScreen5(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Chat 1', is_theme: true, tag: 'New', widget: NoChatsScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Chat 2', is_theme: true, tag: 'New', widget: NoChatsScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Chat 3', is_theme: true, tag: 'New', widget: NoChatsScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Chat 4', is_theme: true, tag: 'New', widget: NoChatsScreen4(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Chat 5', is_theme: true, tag: 'New', widget: NoChatsScreen5(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Event 1', is_theme: true, tag: 'New', widget: NoEventScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Event 2', is_theme: true, tag: 'New', widget: NoEventScreen2(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Event 3', is_theme: true, tag: 'New', widget: NoEventScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Event 4', is_theme: true, tag: 'New', widget: NoEventScreen4(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Sent Mail 1', is_theme: true, tag: 'New', widget: NoMailScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Sent Mail 2', is_theme: true, tag: 'New', widget: NoSentMailScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Notification 1', is_theme: true, tag: 'New', widget: NoNotificationScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Notification 2', is_theme: true, tag: 'New', widget: NoNotificationScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Notification 3', is_theme: true, tag: 'New', widget: NoNotificationScreen3(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Notification 4', is_theme: true, tag: 'New', widget: NoNotificationScreen4(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Notification 5', is_theme: true, tag: 'New', widget: NoNotificationScreen5(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Photos 1', is_theme: true, tag: 'New', widget: NoPhotosScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Photos 2', is_theme: true, tag: 'New', widget: NoPhotosScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Photos 3', is_theme: true, tag: 'New', widget: NoPhotosScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Photos 4', is_theme: true, tag: 'New', widget: NoPhotosScreen4(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Photos 5', is_theme: true, tag: 'New', widget: NoPhotosScreen5(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Videos 1', is_theme: true, tag: 'New', widget: NoVideosScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Videos 2', is_theme: true, tag: 'New', widget: NoVideosScreen2(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Videos 3', is_theme: true, tag: 'New', widget: NoVideosScreen3(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'No Videos 4', is_theme: true, tag: 'New', widget: NoVideosScreen4(), darkThemeSupported: true));
   list.add(ProTheme(name: 'No Videos 5', is_theme: true, tag: 'New', widget: NoVideosScreen5(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Task Done 1', is_theme: true, tag: 'New', widget: TaskDoneScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Task Done 2', is_theme: true, tag: 'New', widget: TaskDoneScreen2(), darkThemeSupported: true));
@@ -1198,7 +1027,6 @@ List<ProTheme> getDetailScreen() {
   list.add(ProTheme(name: 'Detail Screen 2', is_theme: true, type: '', widget: T4Detail(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Detail Screen 3', is_theme: true, type: '', widget: T7PlaceDetail(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Detail Screen 4', is_theme: true, type: '', widget: T9Description(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Detail Screen 5', is_theme: true, type: '', widget: T11DescriptionScreen(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Detail Screen 6', is_theme: true, type: '', widget: T10Description(), darkThemeSupported: true));
   return list;
 }
@@ -1298,16 +1126,11 @@ ProTheme getDashboards() {
   list.add(ProTheme(name: 'Smart Home', tag: '', widget: SmartHomeDashboard(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Analytics Dashboard', tag: '', widget: AnalyticsDashboard(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Split Bill', tag: '', widget: SplitBillDashboard(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Health Medical', tag: '', widget: HealthMedicalDashboard(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Utility Tracker', tag: '', widget: UtilityTrackerDashboard(), darkThemeSupported: true));
   list.add(ProTheme(name: 'Food', type: '', widget: Dashboard1()));
-  list.add(ProTheme(name: 'E-Commerce', type: '', widget: Dashboard2()));
-  list.add(ProTheme(name: 'Furniture', type: '', widget: Dashboard3()));
   list.add(ProTheme(name: 'e-Wallet', type: '', widget: Dashboard4()));
-  list.add(ProTheme(name: 'Hotel Booking', type: '', widget: Dashboard5()));
   list.add(ProTheme(name: 'Laundry', type: '', widget: Dashboard6()));
   list.add(ProTheme(name: 'Medical', type: '', widget: Dashboard7()));
-  list.add(ProTheme(name: 'Home automation', type: '', widget: Dashboard8()));
 
   theme.sub_kits!.addAll(list);
   return theme;
@@ -1320,51 +1143,7 @@ ProTheme getFullApps() {
   ProTheme theme = ProTheme(name: "Full Apps", tag: 'New', show_cover: true, sub_kits: []);
 
   List<ProTheme> list = [];
-  list.add(ProTheme(name: 'Caffely', tag: 'New', widget: CaffelySplashScreen()));
-  list.add(ProTheme(name: 'Moviea', tag: 'New', widget: MovieaSplashScreen()));
-  list.add(ProTheme(name: 'Potea', tag: 'New', widget: PoteaSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Adoptify', tag: 'New', widget: AdoptifySplashscreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Scribblr', tag: 'New', widget: ScribblrSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Pro Scan', tag: '', widget: ProScanSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Relix', tag: '', widget: RelixSplashScreen()));
-  list.add(ProTheme(name: 'Flix v2', tag: '', widget: FvSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Investor', tag: '', widget: SMSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'EV Spot', tag: '', widget: EVSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Home Service', tag: '', widget: SplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Carea', widget: CareaSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Room Finder', tag: '', widget: RFSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Appetit', tag: '', widget: ASplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'NFT Market Place', tag: '', widget: NMPSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Snagajob', tag: '', widget: JSSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Juber Taxi', tag: '', widget: JCBSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'SocialV', tag: '', widget: SVSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Beauty Master', tag: '', widget: BMSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Laundry Service', tag: '', widget: LSWalkThroughScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Mealime', tag: '', widget: MIASplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Recipe and Cooking', tag: '', widget: RCSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Coin Pro', tag: '', widget: CPSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Sneaker Shopping', tag: '', widget: SSSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Smart Home', tag: '', widget: SHSplashScreen(), darkThemeSupported: true, isWebSupported: true));
-  list.add(ProTheme(name: 'Wallet', tag: '', widget: WASplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Event', tag: '', widget: EASplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'MediLab', tag: '', widget: MLSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Dating', tag: '', widget: DASplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Medium', type: '', widget: MSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Cloud Storage', type: '', widget: CSSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'NewsBlog', type: '', widget: NBSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Smart Deck', type: '', widget: SDSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Music PodCast', type: '', widget: MPSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Banking', type: '', widget: BankingSplash(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Hair Salon', type: '', widget: BHSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Learner', type: '', widget: LearnerWalkThrough(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Online Quiz', type: '', widget: QuizSignIn(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Shop hop', type: '', widget: ShSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Food', type: '', widget: FoodWalkThrough(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Grocery', type: '', widget: GrocerySplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Orapay', type: '', widget: OPSplashScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Social', type: '', widget: SocialWalkThrough(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'QiBus', type: '', widget: QIBusSplash(), darkThemeSupported: true));
-
+  
   theme.sub_kits!.addAll(list);
   return theme;
 }
@@ -1700,8 +1479,7 @@ ProTheme getIntegrations({String? route}) {
   List<ProTheme> list = [];
 
   list.add(ProTheme(name: 'Generate QR Code', title_name: 'Integrations', show_cover: false, widget: GenerateQRCodeScreen(), darkThemeSupported: true, tag: ''));
-  list.add(ProTheme(name: 'PDF Viewer', title_name: 'Integrations', show_cover: false, sub_kits: getPdfListScreen(), darkThemeSupported: true, tag: ''));
-  list.add(ProTheme(name: 'Firebase CRUD', title_name: 'Integrations', show_cover: false, widget: FUserListScreen(), darkThemeSupported: true, type: ''));
+  //list.add(ProTheme(name: 'PDF Viewer', title_name: 'Integrations', show_cover: false, sub_kits: getPdfListScreen(), darkThemeSupported: true, tag: ''));
   list.add(ProTheme(name: 'Chart', title_name: 'Integrations', show_cover: false, sub_kits: getChartList(), darkThemeSupported: true, type: ''));
   list.add(ProTheme(name: 'Third Party Integration', title_name: 'Integrations', type: '', show_cover: false, sub_kits: getIntegration(), darkThemeSupported: true));
   list.add(ProTheme(name: 'UI Interactions', title_name: 'Integrations', type: '', show_cover: false, sub_kits: getUI(), darkThemeSupported: true));
@@ -1715,11 +1493,11 @@ ProTheme getIntegrations({String? route}) {
 List<ProTheme> getIntegration() {
   List<ProTheme> list = [];
 
-  if (isIOS) list.add(ProTheme(name: 'Apple Sign In', show_cover: false, tag: 'New', type: '', widget: AppleSignInScreen(), darkThemeSupported: false, isWebSupported: false));
+  //if (isIOS) list.add(ProTheme(name: 'Apple Sign In', show_cover: false, tag: 'New', type: '', widget: AppleSignInScreen(), darkThemeSupported: false, isWebSupported: false));
   // list.add(ProTheme(name: 'File Picker', show_cover: false, type: '', widget: FilePickerScreen(), darkThemeSupported: true, isWebSupported: false));
   list.add(ProTheme(name: 'Image Picker', show_cover: false, type: '', widget: ImagePickerScreen(), darkThemeSupported: true, isWebSupported: true));
   list.add(ProTheme(name: 'Video Picker', show_cover: false, type: '', widget: VideoPickerScreen(), darkThemeSupported: true, isWebSupported: true));
-  list.add(ProTheme(name: 'Audio Picker', show_cover: false, type: '', widget: AudioPickerScreen(), darkThemeSupported: true, isWebSupported: true));
+  //list.add(ProTheme(name: 'Audio Picker', show_cover: false, type: '', widget: AudioPickerScreen(), darkThemeSupported: true, isWebSupported: true));
   list.add(ProTheme(name: 'Local Notification', show_cover: false, type: '', widget: LocalNotificationScreen(), darkThemeSupported: true, isWebSupported: false));
   if (!isWeb) list.add(ProTheme(name: 'Fingerprint Authentication', show_cover: false, type: '', widget: FingerprintAuthentication(), darkThemeSupported: true, isWebSupported: false));
   list.add(ProTheme(name: 'Before After Image', show_cover: false, type: '', widget: BeforeAfterImageScreen(), darkThemeSupported: true, isWebSupported: true));
@@ -1854,10 +1632,6 @@ ProTheme getWebApps() {
 List<ProTheme> getPortfolioSites() {
   List<ProTheme> list = [];
 
-  list.add(ProTheme(name: 'Portfolio 1', tag: 'New', show_cover: false, widget: Portfolio1Screen(), darkThemeSupported: true, isWebSupported: true));
-  list.add(ProTheme(name: 'Portfolio 2', tag: 'New', show_cover: false, widget: Portfolio2Screen(), darkThemeSupported: true, isWebSupported: true));
-  list.add(ProTheme(name: 'Portfolio 3', tag: 'New', show_cover: false, widget: Portfolio3Screen(), darkThemeSupported: true, isWebSupported: true));
-
   return list;
 }
 
@@ -1890,13 +1664,6 @@ List<ProTheme> getChartList() {
   return list;
 }
 
-List<ProTheme> getPdfListScreen() {
-  List<ProTheme> list = [];
 
-  list.add(ProTheme(name: 'Online PDF Viewer', tag: '', widget: OnlinePdfViewerScreen(), darkThemeSupported: true));
-  list.add(ProTheme(name: 'Local PDF Viewer', tag: '', widget: LocalPdfViewerScreen(), darkThemeSupported: true));
-
-  return list;
-}
 
 //endregion

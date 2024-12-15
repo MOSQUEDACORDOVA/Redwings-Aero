@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:prokit_flutter/main/model/AppModel.dart';
 import 'package:prokit_flutter/main/utils/AppColors.dart';
@@ -25,7 +24,6 @@ class ProKitScreenListingState extends State<ProKitScreenListing> {
   var selectedTab = 0;
   List<ProTheme> list = [];
 
-  BannerAd? myBanner;
 
   @override
   void initState() {
@@ -41,7 +39,6 @@ class ProKitScreenListingState extends State<ProKitScreenListing> {
 
   @override
   void dispose() {
-    myBanner?.dispose();
 
     super.dispose();
   }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:prokit_flutter/main/component/SettingScreenComponents.dart';
 import 'package:prokit_flutter/main/screens/AboutUsScreen.dart';
@@ -25,8 +24,6 @@ class SettingScreen extends StatefulWidget {
 }
 
 class SettingScreenState extends State<SettingScreen> {
-  InterstitialAd? interstitialAd;
-  BannerAd? myBanner;
 
   @override
   void initState() {
@@ -38,60 +35,17 @@ class SettingScreenState extends State<SettingScreen> {
     if (isMobile) {
       _createInterstitialAd();
 
-      myBanner = loadBannerAd()..load();
     }
   }
 
-  BannerAd loadBannerAd() {
-    return BannerAd(
-      adUnitId: getBannerAdUnitId()!,
-      size: AdSize.banner,
-      request: AdRequest(),
-      listener: BannerAdListener(onAdLoaded: (ad) {
-        //
-      }),
-    );
-  }
 
   void _createInterstitialAd() {
-    InterstitialAd.load(
-      adUnitId: getInterstitialAdUnitId(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (InterstitialAd ad) {
-          print('$ad loaded');
-          interstitialAd = ad;
-          interstitialAd!.setImmersiveMode(true);
-        },
-        onAdFailedToLoad: (LoadAdError error) {
-          print('InterstitialAd failed to load: $error.');
-          interstitialAd = null;
-          _createInterstitialAd();
-        },
-      ),
-      request: AdRequest(),
-    );
+
   }
 
   void _showInterstitialAd() {
-    if (interstitialAd == null) {
-      print('Warning: attempt to show interstitial before loaded.');
-      return;
-    }
-    interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
-      onAdShowedFullScreenContent: (InterstitialAd ad) => print('ad onAdShowedFullScreenContent.'),
-      onAdDismissedFullScreenContent: (InterstitialAd ad) {
-        print('$ad onAdDismissedFullScreenContent.');
-        ad.dispose();
-        _createInterstitialAd();
-      },
-      onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
-        print('$ad onAdFailedToShowFullScreenContent: $error');
-        ad.dispose();
-        _createInterstitialAd();
-      },
-    );
-    interstitialAd!.show();
-    interstitialAd = null;
+
+  
   }
 
   @override
@@ -107,9 +61,7 @@ class SettingScreenState extends State<SettingScreen> {
       _showInterstitialAd();
     }
 
-    interstitialAd?.dispose();
 
-    myBanner?.dispose();
   }
 
   @override
@@ -299,13 +251,7 @@ class SettingScreenState extends State<SettingScreen> {
                 ],
               ),
             ),
-            if (myBanner != null)
-              Positioned(
-                child: AdWidget(ad: myBanner!),
-                bottom: 0,
-                height: myBanner!.size.height.toDouble(),
-                width: myBanner!.size.width.toDouble(),
-              ).visible(!getBoolAsync(IN_APP_STORE_REVIEW)),
+           
           ],
         ),
       ),

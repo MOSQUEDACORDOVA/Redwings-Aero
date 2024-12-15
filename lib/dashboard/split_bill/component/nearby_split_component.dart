@@ -5,7 +5,6 @@ import 'package:prokit_flutter/dashboard/split_bill/utils/colors.dart';
 import 'package:prokit_flutter/dashboard/split_bill/utils/images.dart';
 import 'package:prokit_flutter/main.dart';
 
-import '../../../fullApps/carea/commons/scrolling_support_web.dart';
 
 class NearbySplitComponent extends StatelessWidget {
   const NearbySplitComponent({
@@ -40,38 +39,7 @@ class NearbySplitComponent extends StatelessWidget {
           ),
         ),
         20.height,
-        ScrollConfiguration(
-          behavior: AppScrollBehavior(),
-          child: HorizontalList(
-            spacing: 16,
-            padding: EdgeInsets.only(left: 16, right: 16),
-            itemCount: splitNearbyFriendsInfo.length,
-            itemBuilder: (context, index) {
-              SplitBillInfoModel nearbyFriendData = splitNearbyFriendsInfo[index];
-              return Container(
-                width: (context.width() / 4) - 28,
-                padding: EdgeInsets.only(left: 8, right: 8, bottom: 18),
-                decoration: BoxDecoration(
-                  color: appStore.isDarkModeOn ? bottomNavBackgroundColor : primarySplitBillColor.withOpacity(0.5),
-                  borderRadius: BorderRadius.all(Radius.elliptical(120, 100)),
-                ),
-                child: Column(
-                  children: [
-                    10.height,
-                    Container(
-                      decoration: BoxDecoration(borderRadius: radius(40), color: nearbyFriendData.iconBgColor),
-                      padding: EdgeInsets.all(8),
-                      child: Image.asset(nearbyFriendData.icon!, height: 30, width: 30, fit: BoxFit.fitWidth),
-                    ),
-                    10.height,
-                    Text('${nearbyFriendData.name}', style: primaryTextStyle()),
-                  ],
-                ),
-              );
-            },
-          ),
-        ),
-        10.height,
+        
         Padding(
           padding: EdgeInsets.all(16),
           child: Column(

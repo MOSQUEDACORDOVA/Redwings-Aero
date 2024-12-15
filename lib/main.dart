@@ -1,16 +1,12 @@
 //region imports
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
-import 'package:prokit_flutter/firebase_options.dart';
-import 'package:prokit_flutter/fullApps/cloudStorage/model/CSDataModel.dart';
 import 'package:prokit_flutter/locale/AppLocalizations.dart';
 import 'package:prokit_flutter/main/screens/AppSplashScreen.dart';
 import 'package:prokit_flutter/main/store/AppStore.dart';
@@ -28,8 +24,6 @@ import 'main/utils/app_scroll_behaviour.dart';
 /// This variable is used to get dynamic colors when theme mode is changed
 AppStore appStore = AppStore();
 
-List<CSDataModel> getCloudBoxList = getCloudboxData();
-List<CSDrawerModel> getCSDrawerList = getCSDrawer();
 int currentIndex = 0;
 BaseLanguage? language;
 
@@ -59,13 +53,6 @@ void main() async {
   }
 
   if (isMobile || isWeb) {
-    Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then((value) {
-      if (isMobile) {
-        MobileAds.instance.initialize();
-      }
-      setupFirebaseRemoteConfig();
-      // FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-    });
 
     if (isMobile) {
       try {

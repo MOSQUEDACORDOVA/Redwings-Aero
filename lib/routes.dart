@@ -2,60 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:prokit_flutter/customPaint/customTemperatureWidget/TemperatureWidgetScreen.dart';
 import 'package:prokit_flutter/dashboard/analytics/screens/analytics_dashboard.dart';
 import 'package:prokit_flutter/dashboard/banking/screens/banking_dashboard.dart';
-import 'package:prokit_flutter/dashboard/health_medical/screens/health_medical_dashboard.dart';
 import 'package:prokit_flutter/dashboard/screen/Dashboard1.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard2.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard3.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard4.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard5.dart';
 import 'package:prokit_flutter/dashboard/screen/Dashboard6.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard7.dart';
-import 'package:prokit_flutter/dashboard/screen/Dashboard8.dart';
-import 'package:prokit_flutter/dashboard/smart_home/screens/smart_home_dashboard.dart';
 import 'package:prokit_flutter/dashboard/split_bill/screens/split_bill_dashboard.dart';
-import 'package:prokit_flutter/dashboard/utility_tracker/screens/utility_tracker_dashboard.dart';
-import 'package:prokit_flutter/fullApps/appetit/screens/ASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/banking/screen/BankingSplash.dart';
-import 'package:prokit_flutter/fullApps/beautyMaster/screens/BMSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/carea/screens/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/cloudStorage/screens/CSSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/coinPro/screen/CPSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/dating/screen/DASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/evSpot/screens/ev_splash_screen.dart';
-import 'package:prokit_flutter/fullApps/eventApp/screens/EASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/flixv2/screen/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/food/screen/FoodWalkThrough.dart';
-import 'package:prokit_flutter/fullApps/grocery/screen/GrocerySplash.dart';
-import 'package:prokit_flutter/fullApps/hairSalon/screens/BHSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/homeService/screens/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/jobSearch/screens/JSSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/juberCarBooking/screens/JCBSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/laundryService/screens/LSWalkThroughScreen.dart';
-import 'package:prokit_flutter/fullApps/learner/Screens/LearnerWalkThrough.dart';
-import 'package:prokit_flutter/fullApps/mealime/screens/MIASplashScreen.dart';
-import 'package:prokit_flutter/fullApps/mediLab/screens/MLSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/medium/screens/MSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/musicPodcast/screen/MPSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/newsBlog/screen/NBSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/nftMarketPlace/screens/NMPSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/orapay/screens/op_splash_screen.dart';
-import 'package:prokit_flutter/fullApps/proScan/screens/pro_scan_splash_sceen.dart';
-import 'package:prokit_flutter/fullApps/qibus/screen/QIBusSplash.dart';
-import 'package:prokit_flutter/fullApps/quiz/Screens/QuizSignIn.dart';
-import 'package:prokit_flutter/fullApps/recipe/screens/RCSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/relixMusicApp/screens/relix_splash_screen.dart';
-import 'package:prokit_flutter/fullApps/roomFinder/screens/RFSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/shopHop/screens/ShSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/smartDeck/Screens/SDSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/smartHome/screens/SHSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/sneakerShopping/screen/SSSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/social/screen/SocialWalkThrough.dart';
-import 'package:prokit_flutter/fullApps/socialv/screens/SVSplashScreen.dart';
-import 'package:prokit_flutter/fullApps/stockMarket/screens/splash_screen.dart';
-import 'package:prokit_flutter/fullApps/walletApp/screen/WASplashScreen.dart';
 import 'package:prokit_flutter/integrations/screens/FingerprintAuthentication.dart';
-import 'package:prokit_flutter/integrations/screens/GenerateQRCodeScreen.dart';
-import 'package:prokit_flutter/integrations/screens/ImagePickerScreen.dart';
 import 'package:prokit_flutter/integrations/screens/LikeButton/LBHomePage.dart';
 import 'package:prokit_flutter/integrations/screens/LocalNotificationScreen.dart';
 import 'package:prokit_flutter/integrations/screens/Shimmer/SHomePage.dart';
@@ -65,11 +15,10 @@ import 'package:prokit_flutter/integrations/screens/VideoPickerScreen.dart';
 import 'package:prokit_flutter/integrations/screens/api/get_method_api_integration.dart';
 import 'package:prokit_flutter/integrations/screens/before_after_image_screen.dart';
 import 'package:prokit_flutter/integrations/screens/confetti/CHomePage.dart';
-import 'package:prokit_flutter/integrations/screens/firebaseCrud/FUserListScreen.dart';
 import 'package:prokit_flutter/integrations/screens/flutterCalender/CalenderHomePage.dart';
 import 'package:prokit_flutter/integrations/screens/flutterTinderCard/TinderHomePage.dart';
 import 'package:prokit_flutter/integrations/screens/liquid_pull_to_refresh_screen.dart';
-import 'package:prokit_flutter/integrations/screens/pdfReader/LocalPdfViewerScreen.dart';
+//import 'package:prokit_flutter/integrations/screens/pdfReader/LocalPdfViewerScreen.dart';
 import 'package:prokit_flutter/integrations/screens/singature_screen.dart';
 import 'package:prokit_flutter/main/screens/ProKitLauncher.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/AllTaskDoneScreen.dart';
@@ -77,15 +26,10 @@ import 'package:prokit_flutter/singleScreens/emptyScreens/AllTaskDoneScreen2.dar
 import 'package:prokit_flutter/singleScreens/emptyScreens/EmptyCartScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/EmptyCartScreen5.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/InboxScreen2.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen2.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen3.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoBalanceScreen4.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoChatsScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoEventScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoEventScreen2.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoEventScreen4.dart';
-import 'package:prokit_flutter/singleScreens/emptyScreens/NoNotificationScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoNotificationScreen3.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/NoSentMailScreen.dart';
 import 'package:prokit_flutter/singleScreens/emptyScreens/TaskDoneScreen2.dart';
@@ -241,10 +185,6 @@ import 'package:prokit_flutter/widgets/paintingAndEffectWidgets/PETransformScree
 import 'package:prokit_flutter/workingApps/chatGPT/screens/chatting_screen.dart';
 import 'package:prokit_flutter/workingApps/chatGPTMailGeneration/screens/chatgpt_splash_screen.dart';
 
-import 'fullApps/caffely/screens/caffely_splash_screen.dart';
-import 'fullApps/moviea/screens/moviea_splash_screen.dart';
-import 'fullApps/scribblr/screens/scribblr_splash_screen.dart';
-import 'integrations/screens/PaymetGatways/FlutterWaveScreen.dart';
 import 'integrations/screens/PaymetGatways/razorpay_screen.dart';
 
 Map<String, WidgetBuilder> routes() {
@@ -257,69 +197,24 @@ Map<String, WidgetBuilder> routes() {
     ProKitLauncher.widgetsTag: (context) => ProKitLauncher(route: ProKitLauncher.widgetsTag),
     ProKitLauncher.dashboardTag: (context) => ProKitLauncher(route: ProKitLauncher.dashboardTag),
     ProKitLauncher.chartsTag: (context) => ProKitLauncher(route: ProKitLauncher.chartsTag),
-    SMSplashScreen.tag: (context) => SMSplashScreen(),
-    EVSplashScreen.tag: (context) => EVSplashScreen(),
-    RelixSplashScreen.tag: (context) => RelixSplashScreen(),
-    ProScanSplashScreen.tag: (context) => ProScanSplashScreen(),
-    ScribblrSplashScreen.tag: (context) => ScribblrSplashScreen(),
-    MovieaSplashScreen.tag: (context) => MovieaSplashScreen(),
-    CaffelySplashScreen.tag: (context) => CaffelySplashScreen(),
-    SplashScreen.tag: (context) => SplashScreen(),
-    CareaSplashScreen.tag: (context) => CareaSplashScreen(),
-    RFSplashScreen.tag: (context) => RFSplashScreen(),
-    ASplashScreen.tag: (context) => ASplashScreen(),
-    NMPSplashScreen.tag: (context) => NMPSplashScreen(),
-    JSSplashScreen.tag: (context) => JSSplashScreen(),
-    JCBSplashScreen.tag: (context) => JCBSplashScreen(),
-    SVSplashScreen.tag: (context) => SVSplashScreen(),
-    BMSplashScreen.tag: (context) => BMSplashScreen(),
-    LSWalkThroughScreen.tag: (context) => LSWalkThroughScreen(),
-    MIASplashScreen.tag: (context) => MIASplashScreen(),
-    RCSplashScreen.tag: (context) => RCSplashScreen(),
-    CPSplashScreen.tag: (context) => CPSplashScreen(),
-    SSSplashScreen.tag: (context) => SSSplashScreen(),
-    SHSplashScreen.tag: (context) => SHSplashScreen(),
-    WASplashScreen.tag: (context) => WASplashScreen(),
-    EASplashScreen.tag: (context) => EASplashScreen(),
-    MLSplashScreen.tag: (context) => MLSplashScreen(),
-    DASplashScreen.tag: (context) => DASplashScreen(),
-    MSplashScreen.tag: (context) => MSplashScreen(),
-    CSSplashScreen.tag: (context) => CSSplashScreen(),
-    NBSplashScreen.tag: (context) => NBSplashScreen(),
-    SDSplashScreen.tag: (context) => SDSplashScreen(),
-    MPSplashScreen.tag: (context) => MPSplashScreen(),
-    BankingSplash.tag: (context) => BankingSplash(),
-    BHSplashScreen.tag: (context) => BHSplashScreen(),
-    LearnerWalkThrough.tag: (context) => LearnerWalkThrough(),
-    QuizSignIn.tag: (context) => QuizSignIn(),
-    ShSplashScreen.tag: (context) => ShSplashScreen(),
-    FoodWalkThrough.tag: (context) => FoodWalkThrough(),
-    GrocerySplashScreen.tag: (context) => GrocerySplashScreen(),
-    OPSplashScreen.tag: (context) => OPSplashScreen(),
-    SocialWalkThrough.tag: (context) => SocialWalkThrough(),
-    QIBusSplash.tag: (context) => QIBusSplash(),
-    FvSplashScreen.tag: (context) => FvSplashScreen(),
+    
 
     // Working Apps
     ChattingScreen.tag: (context) => ChattingScreen(isDirect: true),
     ChatGPTSplashScreen.tag: (context) => ChatGPTSplashScreen(),
 
     // Integrations
-    FUserListScreen.tag: (context) => FUserListScreen(isDirect: true),
     SHomePage.tag: (context) => SHomePage(isDirect: true),
     GETMethodExampleScreen.tag: (context) => GETMethodExampleScreen(isDirect: true),
     RazorPayScreen.tag: (context) => RazorPayScreen(isDirect: true),
-    FlutterWaveScreen.tag: (context) => FlutterWaveScreen(isDirect: true),
     LBHomePage.tag: (context) => LBHomePage(isDirect: true),
     TinderHomePage.tag: (context) => TinderHomePage(isDirect: true),
     CHomePage.tag: (context) => CHomePage(isDirect: true),
-    LocalPdfViewerScreen.tag: (context) => LocalPdfViewerScreen(isDirect: true),
+    //LocalPdfViewerScreen.tag: (context) => LocalPdfViewerScreen(isDirect: true),
     SignatureScreen.tag: (context) => SignatureScreen(isDirect: true),
     SVCHomePage.tag: (context) => SVCHomePage(isDirect: true),
     BeforeAfterImageScreen.tag: (context) => BeforeAfterImageScreen(isDirect: true),
-    ImagePickerScreen.tag: (context) => ImagePickerScreen(isDirect: true),
     VideoPickerScreen.tag: (context) => VideoPickerScreen(isDirect: true),
-    GenerateQRCodeScreen.tag: (context) => GenerateQRCodeScreen(isDirect: true),
     FingerprintAuthentication.tag: (context) => FingerprintAuthentication(isDirect: true),
     LocalNotificationScreen.tag: (context) => LocalNotificationScreen(isDirect: true),
     CalenderHomePage.tag: (context) => CalenderHomePage(isDirect: true),
@@ -462,18 +357,9 @@ Map<String, WidgetBuilder> routes() {
 
     // Dashboard
     Dashboard1.tag: (context) => Dashboard1(isDirect: true),
-    Dashboard2.tag: (context) => Dashboard2(isDirect: true),
-    Dashboard3.tag: (context) => Dashboard3(isDirect: true),
-    Dashboard4.tag: (context) => Dashboard4(isDirect: true),
-    Dashboard5.tag: (context) => Dashboard5(isDirect: true),
     Dashboard6.tag: (context) => Dashboard6(isDirect: true),
-    Dashboard7.tag: (context) => Dashboard7(isDirect: true),
-    Dashboard8.tag: (context) => Dashboard8(isDirect: true),
-    UtilityTrackerDashboard.tag: (context) => UtilityTrackerDashboard(isDirect: true),
-    HealthMedicalDashboard.tag: (context) => HealthMedicalDashboard(isDirect: true),
     SplitBillDashboard.tag: (context) => SplitBillDashboard(isDirect: true),
     AnalyticsDashboard.tag: (context) => AnalyticsDashboard(isDirect: true),
-    SmartHomeDashboard.tag: (context) => SmartHomeDashboard(isDirect: true),
     BankingDashboard.tag: (context) => BankingDashboard(isDirect: true),
 
     // Screens
@@ -516,17 +402,12 @@ Map<String, WidgetBuilder> routes() {
     ChoosePlanScreen7.tag: (context) => ChoosePlanScreen7(isDirect: true),
     TaskDoneScreen3.tag: (context) => TaskDoneScreen3(),
     NoSentMailScreen.tag: (context) => NoSentMailScreen(),
-    NoNotificationScreen.tag: (context) => NoNotificationScreen(),
     NoNotificationScreen3.tag: (context) => NoNotificationScreen3(),
     TaskDoneScreen2.tag: (context) => TaskDoneScreen2(),
-    NoEventScreen4.tag: (context) => NoEventScreen4(),
     NoEventScreen2.tag: (context) => NoEventScreen2(),
     NoChatsScreen.tag: (context) => NoChatsScreen(),
-    NoBalanceScreen2.tag: (context) => NoBalanceScreen2(),
     NoEventScreen.tag: (context) => NoEventScreen(),
     NoBalanceScreen4.tag: (context) => NoBalanceScreen4(),
-    NoBalanceScreen3.tag: (context) => NoBalanceScreen3(),
-    NoBalanceScreen.tag: (context) => NoBalanceScreen(),
     InboxScreen2.tag: (context) => InboxScreen2(),
     EmptyCartScreen5.tag: (context) => EmptyCartScreen5(),
     AllTaskDoneScreen.tag: (context) => AllTaskDoneScreen(),

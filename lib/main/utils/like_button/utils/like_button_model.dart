@@ -40,7 +40,7 @@ class CircleColor {
   }
 
   @override
-  int get hashCode => hashValues(start, end);
+  int get hashCode => Object.hash(start, end);
 }
 
 class OvershootCurve extends Curve {

@@ -10,7 +10,6 @@ import 'package:prokit_flutter/dashboard/analytics/utils/colors.dart';
 import 'package:prokit_flutter/dashboard/analytics/utils/common.dart';
 import 'package:prokit_flutter/dashboard/analytics/utils/constant.dart';
 import 'package:prokit_flutter/dashboard/analytics/utils/images.dart';
-import 'package:prokit_flutter/dashboard/health_medical/utils/images.dart';
 import 'package:prokit_flutter/main.dart';
 import 'package:prokit_flutter/main/screens/ProKitLauncher.dart';
 
@@ -70,20 +69,8 @@ class _AnalyticsDashboardFragmentState extends State<AnalyticsDashboardFragment>
             },
             icon: Image.asset(ic_search, height: 20, width: 20, color: appStore.isDarkModeOn ? Colors.white : Colors.black),
           ),
-          IconButton(
-            onPressed: () {
-              //
-            },
-            icon: Image.asset(ic_notification, height: 20, width: 20, color: appStore.isDarkModeOn ? Colors.white : Colors.black),
-          ),
-          IconButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              //
-            },
-            icon: ClipRRect(borderRadius: BorderRadius.circular(DEFAULT_ANALYTICS_RADIUS), child: Image.asset(img_person, height: 40, width: 40, fit: BoxFit.cover)),
-          ),
-          12.width,
+          
+          
         ],
         color: appStore.isDarkModeOn ? appBackgroundColorDark : Colors.white,
         systemUiOverlayStyle: SystemUiOverlayStyle(statusBarColor: appStore.isDarkModeOn ? appBackgroundColorDark : Colors.white),

@@ -6,7 +6,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:prokit_flutter/main.dart';
 import 'package:prokit_flutter/main/utils/AppConstant.dart';
 
-import '../../../fullApps/roomFinder/utils/RFWidget.dart';
+//import '../../../fullApps/roomFinder/utils/RFWidget.dart';
 import '../AppColors.dart';
 import 'src/frame_content.dart';
 import 'src/media_query_observer.dart';

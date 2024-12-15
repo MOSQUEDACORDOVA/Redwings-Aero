@@ -17,11 +17,11 @@ dependencies:
   google_fonts: ^6.2.1
 
   # FIREBASE PACKAGES
-  firebase_core: ^3.8.0
-  firebase_messaging: ^15.1.5
-  cloud_firestore: ^5.5.0
-  firebase_auth: ^5.3.3
-  firebase_remote_config: ^5.1.5
+  #firebase_core: ^3.8.0
+  #firebase_messaging: ^15.1.5
+  #cloud_firestore: ^5.5.0
+  #firebase_auth: ^5.3.3
+  #firebase_remote_config: ^5.1.5
 
   # Common
   share_plus: ^10.1.2
@@ -32,7 +32,7 @@ dependencies:
   # IMAGE
   cached_network_image: ^3.4.1
   image_picker: ^1.1.2
-  file_picker: ^8.1.4
+  # file_picker: ^8.1.5
   card_swiper: ^3.0.1
 
   # AUTHENTICATION
@@ -52,9 +52,6 @@ dependencies:
   # WEB TOOLS
   webview_flutter: ^4.9.0
 
-  # ADS
-  google_mobile_ads: ^5.2.0
-
   # UI
   simple_animations: ^5.0.2
   flutter_svg: ^2.0.15
@@ -71,7 +68,7 @@ dependencies:
   clippy_flutter: ^1.1.1
   showcaseview: ^3.0.0
   fl_chart: ^0.69.2
-  syncfusion_flutter_charts: ^27.2.3
+  syncfusion_flutter_charts: ^28.1.33
   flutter_reaction_button: ^3.0.0+3
   smooth_star_rating_null_safety: ^1.0.4+2
 #  country_calling_code_picker: ^2.0.1
@@ -95,9 +92,6 @@ dependencies:
 #  multi_image_picker_plus: ^0.0.5
 #  collection: ^1.19.0
 
-  # PDF VIEWER #
-  easy_pdf_viewer: ^1.0.8
-
   # Generate QR Code #
   qr_flutter: ^4.1.0
 #  scan: 1.6.0
@@ -107,7 +101,7 @@ dependencies:
   flutter_switch: ^0.3.2
 
   cunning_document_scanner: ^1.2.3
-  syncfusion_flutter_signaturepad: ^27.2.3
+  syncfusion_flutter_signaturepad: ^28.1.33
 
   # Moviea #
   otp_input_editor: ^0.0.9
@@ -160,7 +154,7 @@ dependencies:
   #snaplist: 0.1.8
 
   # SMART HOME #
-  syncfusion_flutter_gauges: ^27.2.3
+  syncfusion_flutter_gauges: ^28.1.33
   dotted_line: ^3.2.3
   country_code_picker: ^3.1.0
 

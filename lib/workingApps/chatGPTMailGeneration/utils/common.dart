@@ -1,4 +1,3 @@
-import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:prokit_flutter/main.dart';
@@ -47,15 +46,4 @@ InputDecoration inputDecoration(
   );
 }
 
-Future<FirebaseRemoteConfig> setupFirebaseRemoteConfig() async {
-  final FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.instance;
 
-  remoteConfig.setConfigSettings(RemoteConfigSettings(fetchTimeout: Duration.zero, minimumFetchInterval: Duration.zero));
-  await remoteConfig.fetch();
-  await remoteConfig.fetchAndActivate();
-
-  await setValue(CHAT_GPT_API_KEY, remoteConfig.getString(CHAT_GPT_API_KEY));
-  await setValue(IN_APP_STORE_REVIEW, remoteConfig.getBool(IN_APP_STORE_REVIEW));
-
-  return remoteConfig;
-}

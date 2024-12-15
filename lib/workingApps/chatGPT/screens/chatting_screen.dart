@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:chat_gpt_flutter/chat_gpt_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:prokit_flutter/main.dart';
 import 'package:prokit_flutter/main/screens/ProKitLauncher.dart';
@@ -66,8 +65,6 @@ class _ChattingScreenState extends State<ChattingScreen> {
   bool isSelectedIndex = false;
   bool isScroll = false;
 
-  InterstitialAd? interstitialAd;
-  BannerAd? myBanner;
 
   @override
   void initState() {
@@ -81,11 +78,6 @@ class _ChattingScreenState extends State<ChattingScreen> {
       setStatusBarColor(appStore.isDarkModeOn ? replyMsgBgColor : Colors.white);
     });
 
-    if (isMobile) {
-      _createInterstitialAd();
-
-      myBanner = loadBannerAd()..load();
-    }
   }
 
   Future<void> initSpeechState() async {
@@ -128,60 +120,9 @@ class _ChattingScreenState extends State<ChattingScreen> {
     });
   }
 
-  BannerAd loadBannerAd() {
-    return BannerAd(
-      adUnitId: getBannerAdUnitId()!,
-      size: AdSize.banner,
-      request: AdRequest(),
-      listener: BannerAdListener(onAdLoaded: (ad) {
-        isBannerLoad = true;
-        setState(() {});
-      }),
-    );
-  }
 
-  void _createInterstitialAd() {
-    InterstitialAd.load(
-      adUnitId: getInterstitialAdUnitId(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (InterstitialAd ad) {
-          print('$ad loaded');
-          interstitialAd = ad;
-          interstitialAd!.setImmersiveMode(true);
-        },
-        onAdFailedToLoad: (LoadAdError error) {
-          print('InterstitialAd failed to load: $error.');
-          interstitialAd = null;
-          _createInterstitialAd();
-        },
-      ),
-      request: AdRequest(),
-    );
-  }
 
-  void _showInterstitialAd() {
-    if (interstitialAd == null) {
-      print('Warning: attempt to show interstitial before loaded.');
-      return;
-    }
 
-    interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
-      onAdShowedFullScreenContent: (InterstitialAd ad) => print('ad onAdShowedFullScreenContent.'),
-      onAdDismissedFullScreenContent: (InterstitialAd ad) {
-        print('$ad onAdDismissedFullScreenContent.');
-        ad.dispose();
-        _createInterstitialAd();
-      },
-      onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
-        print('$ad onAdFailedToShowFullScreenContent: $error');
-        ad.dispose();
-        _createInterstitialAd();
-      },
-    );
-    interstitialAd!.show();
-    interstitialAd = null;
-    adCount = 0;
-  }
 
   @override
   void setState(fn) {
@@ -214,11 +155,7 @@ class _ChattingScreenState extends State<ChattingScreen> {
 
     await _chatStreamResponse(testRequest);
 
-    if (adCount == showAdCount) {
-      _showInterstitialAd();
-    } else {
-      adCount++;
-    }
+    
 
     log("========== AD count $adCount");
     questionAnswers[0].isLoading = false;
@@ -276,9 +213,7 @@ class _ChattingScreenState extends State<ChattingScreen> {
     msgController.dispose();
     streamSubscription?.cancel();
 
-    interstitialAd?.dispose();
 
-    myBanner?.dispose();
 
     super.dispose();
   }
@@ -409,7 +344,7 @@ class _ChattingScreenState extends State<ChattingScreen> {
           Container(
             height: context.height(),
             width: context.width(),
-            margin: EdgeInsets.only(bottom: 66 + (isBannerLoad ? AdSize.banner.height : 0) + (isShowOption ? 50 : 0)),
+            margin: EdgeInsets.only(bottom: 66 + (isShowOption ? 50 : 0)),
             padding: EdgeInsets.only(left: 16, right: 16),
             child: ListView.separated(
               separatorBuilder: (_, i) => Divider(color: Colors.transparent),
@@ -548,14 +483,7 @@ class _ChattingScreenState extends State<ChattingScreen> {
                   ],
                 ).paddingSymmetric(horizontal: 16),
                 16.height,
-                if (isMobile)
-                  AdWidget(ad: myBanner!).withSize(
-                      width: myBanner!.size.width.toDouble(),
-                      height: isIOS
-                          ? myBanner!.size.height.toDouble()
-                          : isBannerLoad
-                              ? 50
-                              : 0),
+                
               ],
             ),
           ),
